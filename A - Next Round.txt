@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    int n,k,i,gf=0;
+    scanf("%d %d",&n,&k);
+    int a[n];
+    for(i=1;i<=n;i++)
+        scanf("%d",&a[i]);
+    for(i=1;i<=n;i++)
+           if(a[i]!=0&&a[i]>=a[k])
+              gf++;
+    printf("%d",gf);
+    return 0;
+}

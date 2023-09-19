@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    
+    int i,k,w,n;
+    cin>>k;
+    cin>>w;
+    cin>>n;
+    i=k*n*(1+n)/2;
+    if(i>w)
+       cout<<i-w;
+    else
+       cout<<0;
+    return 0;
+}

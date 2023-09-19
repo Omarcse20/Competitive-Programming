@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,x,y,gf=0;
+    int a[5][5];
+    for(i=0;i<5;i++)
+       for(j=0;j<5;j++){
+           scanf("%d",&a[i][j]);
+             if(a[i][j]==1){
+                 x=i;
+                 y=j;
+             }
+                
+       }
+   
+    if(x<=2)
+        for(i=x;i<2;i++)
+            gf++;
+    if(x>=2)
+        for(i=x;i>2;i--)
+            gf++;
+    if(y<=2)
+        for(j=y;j<2;j++)
+               gf++;
+    if(y>=2)
+        for(j=y;j>2;j--)
+               gf++;       
+    printf("%d",gf); 
+
+    return 0;
+}

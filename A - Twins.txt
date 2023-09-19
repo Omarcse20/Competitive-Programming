@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    
+    int n,i,sum=0,gf=0;
+    cin>>n;
+    int a[n];
+    for(i=0;i<n;i++){
+       cin>>a[i];
+       sum+=a[i];
+    }
+    if(sum%2!=0)
+      sum--;
+    sort(a,a+n);
+    for(i=n-1;i>=0;i--){
+        gf+=a[i];
+        if(gf>=sum/2+1){
+            gf=n-i;
+            break;
+        }
+           
+    }
+    cout<<gf;
+    return 0;
+}

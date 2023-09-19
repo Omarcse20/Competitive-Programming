@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+   int n,i,xi,xj,gf=0,max=0;
+   cin>>n;
+   for(i=0;i<n;i++){
+       cin>>xi;
+       cin>>xj;
+       gf+=(xj-xi);
+       if(gf>max)
+         max=gf;
+   }
+   cout<<max;
+   return 0;
+}

@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a,m,n,i,gf=1;
+    cin>>a;
+    cin>>m;
+    int am[m];
+    for(i=0;i<m;i++)
+       cin>>am[i];
+    cin>>n;
+    int an[n];
+    for(i=0;i<n;i++)
+       cin>>an[i]; 
+    sort(am,am+m);
+    sort(an,an+n);
+    int f[m+n];
+    merge(am,am+m,an,an+n,f);
+    for(i=0;i<m+n;i++)
+        if(f[i]==gf)
+          gf++;
+    if(gf-1==a)
+       cout<<"I become the guy."<<endl;
+    else
+       cout<<"Oh, my keyboard!"<<endl;
+    return 0;
+}

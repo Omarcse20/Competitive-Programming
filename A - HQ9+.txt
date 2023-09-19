@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   string s;
+   int i,gf=0;
+   cin>>s;
+   for(i=0;i<s.size();i++)
+      if(s[i]=='H'||s[i]=='Q'||s[i]=='9'){
+         gf++;
+         break;
+      }
+   if(s.size()>1)
+      if(s[s.size()-1]=='+'&&s[s.size()-2]!='0'&&s[s.size()-2]!='8'&&s[s.size()-2]!='+')
+         gf++;
+   if(gf)
+     cout<<"YES";
+   else
+     cout<<"NO";
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int y,i;
+    cin>>y;
+    for(i=y+1;;i++){
+        int i1,i2,i3,i4;
+        i4=i/1000;i3=(i/100)%10;i2=(i/10)%10;i1=i%10;
+        if(i1==i2||i1==i3||i1==i4||i2==i3||i2==i4||i3==i4)
+          continue;
+        else
+          break;
+    }
+    cout<<i;
+    return 0;
+}
